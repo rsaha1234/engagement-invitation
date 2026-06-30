@@ -1,0 +1,294 @@
+.gate-container{
+position:fixed;
+inset:0;
+
+overflow:hidden;
+
+z-index:9999;
+
+background:#fff5f9;
+background:
+radial-gradient(circle at 50% 38%, rgba(255,255,255,.8), rgba(255,255,255,0) 30%),
+linear-gradient(135deg, #fff9fc, #f9e8ef);
+
+transition:
+opacity .9s ease,
+filter .9s ease;
+}
+
+.gate-closing{
+opacity:0;
+filter:blur(8px) brightness(1.08);
+pointer-events:none;
+}
+
+/* VIDEO */
+
+.intro-video{
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+z-index:1;
+
+opacity:0;
+
+transition:opacity .7s ease;
+}
+
+.video-show{
+opacity:1;
+}
+
+.video-show + .video-glow{
+opacity:1;
+}
+
+.video-glow{
+position:fixed;
+inset:0;
+
+pointer-events:none;
+
+z-index:2;
+
+opacity:0;
+
+background:
+radial-gradient(
+circle at center,
+rgba(255,219,233,.26),
+rgba(238,171,195,.14) 35%,
+rgba(255,255,255,0) 70%
+);
+
+transition:opacity 1.2s ease;
+}
+
+/* GATES */
+
+.door{
+position:absolute;
+
+top:0;
+
+width:50%;
+height:100%;
+
+background:
+linear-gradient(135deg, rgba(255,255,255,.68), rgba(255,255,255,.24)),
+radial-gradient(circle at 18% 18%, rgba(255,211,228,.58), rgba(255,255,255,0) 24%),
+radial-gradient(circle at 82% 20%, rgba(244,190,209,.44), rgba(255,255,255,0) 26%),
+linear-gradient(
+180deg,
+#fff9fc,
+#f9e9ef 50%,
+#fff5f9
+);
+
+z-index:10;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.9),
+inset 0 -1px 0 rgba(205,126,151,.16),
+0 18px 60px rgba(112,57,77,.09);
+
+backdrop-filter:blur(18px) saturate(135%);
+-webkit-backdrop-filter:blur(18px) saturate(135%);
+}
+
+.door::before{
+content:"";
+
+position:absolute;
+inset:clamp(14px, 3vw, 28px);
+
+border:1px solid rgba(205,126,151,.24);
+border-radius:28px;
+
+background:
+linear-gradient(135deg, rgba(255,255,255,.38), rgba(255,255,255,0) 42%),
+radial-gradient(circle at 26% 24%, rgba(238,164,190,.2), rgba(255,255,255,0) 24%),
+radial-gradient(circle at 76% 76%, rgba(205,126,151,.16), rgba(255,255,255,0) 26%);
+
+pointer-events:none;
+}
+
+.left{
+left:0;
+
+border-right:2px solid #dfa3b7;
+box-shadow:
+inset -12px 0 28px rgba(205,126,151,.12),
+0 18px 60px rgba(112,57,77,.09);
+}
+
+.right{
+right:0;
+
+border-left:2px solid #dfa3b7;
+box-shadow:
+inset 12px 0 28px rgba(205,126,151,.12),
+0 18px 60px rgba(112,57,77,.09);
+}
+
+.open-left{
+animation:leftOpen 3.5s ease forwards;
+}
+
+.open-right{
+animation:rightOpen 3.5s ease forwards;
+}
+
+@keyframes leftOpen{
+to{
+transform:translateX(-100%);
+}
+}
+
+@keyframes rightOpen{
+to{
+transform:translateX(100%);
+}
+}
+
+/* LOGO */
+
+.logo-wrapper{
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+z-index:20;
+
+cursor:pointer;
+
+text-align:center;
+
+padding:22px 24px 18px;
+
+border:1px solid rgba(255,255,255,.78);
+border-radius:28px;
+
+background:
+linear-gradient(135deg, rgba(255,255,255,.76), rgba(255,235,243,.42));
+
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.9),
+0 24px 68px rgba(112,57,77,.18);
+
+backdrop-filter:blur(18px) saturate(145%);
+-webkit-backdrop-filter:blur(18px) saturate(145%);
+
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease;
+}
+
+.logo-wrapper:hover{
+transform:translate(-50%,-53%);
+
+border-color:rgba(205,126,151,.4);
+
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.95),
+0 30px 78px rgba(112,57,77,.24);
+}
+
+.logo-wrapper img{
+width:clamp(170px, 24vw, 220px);
+height:clamp(170px, 24vw, 220px);
+
+display:block;
+
+border-radius:50%;
+object-fit:contain;
+
+animation:
+float 3s ease-in-out infinite;
+}
+
+.logo-wrapper p{
+margin-top:12px;
+
+color:#9b536c;
+
+font-family:serif;
+font-size:.95rem;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo-wrapper{
+padding:16px 18px 14px;
+border-radius:22px;
+}
+
+.logo-wrapper img{
+width:170px;
+height:170px;
+}
+
+.logo-wrapper p{
+font-size:.9rem;
+}
+
+@media(max-width:480px){
+
+.logo-wrapper{
+padding:12px 14px;
+border-radius:18px;
+}
+
+.logo-wrapper img{
+width:142px;
+height:142px;
+}
+
+.logo-wrapper p{
+font-size:.72rem;
+letter-spacing:1.4px;
+}
+}
+
+@media(max-height:560px){
+
+.logo-wrapper img{
+width:128px;
+height:128px;
+}
+
+.logo-wrapper p{
+margin-top:8px;
+}
+}
+}

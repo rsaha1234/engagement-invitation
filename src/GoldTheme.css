@@ -1,0 +1,324 @@
+:root{
+  --gold:#eac673;
+  --gold-light:#eee3c8;
+  --gold-dark:#8e7a50;
+  --brown:#625b4e;
+  --brown-soft:#817a6e;
+  --ivory:#fffefa;
+  --champagne:#f8f3e7;
+}
+
+body{
+  background:var(--ivory);
+}
+
+.gate-container{
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255,255,255,.82), transparent 30%),
+    linear-gradient(135deg, #fffdf7, #f2e5c5);
+}
+
+.video-glow{
+  background:radial-gradient(circle at center, rgba(226,195,119,.28), rgba(190,151,74,.14) 35%, transparent 70%);
+}
+
+.door{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.7), rgba(255,255,255,.24)),
+    radial-gradient(circle at 18% 18%, rgba(238,216,159,.6), transparent 24%),
+    radial-gradient(circle at 82% 20%, rgba(218,187,111,.45), transparent 26%),
+    linear-gradient(180deg, #fffdf7, #f2e8d0 50%, #fbf5e6);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 0 rgba(190,151,74,.18), 0 18px 60px rgba(83,65,32,.1);
+} 
+
+.door::before{
+  border-color:rgba(190,151,74,.3);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.4), transparent 42%),
+    radial-gradient(circle at 26% 24%, rgba(214,180,98,.22), transparent 24%),
+    radial-gradient(circle at 76% 76%, rgba(190,151,74,.18), transparent 26%);
+} 
+
+.left{border-right-color:var(--gold-light);}
+.right{border-left-color:var(--gold-light);}
+
+.logo-wrapper{
+  background:linear-gradient(135deg, rgba(255,255,255,.8), rgba(244,231,195,.48));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9), 0 24px 68px rgba(83,65,32,.18);
+}
+
+.logo-wrapper:hover{border-color:rgba(182,138,50,.48);}
+.logo-wrapper p{color:var(--gold-dark);}
+
+.hero{background-color:var(--ivory);}
+
+.hero::before,
+.hero::after{
+  opacity:.72;
+  filter:sepia(1) saturate(.9) hue-rotate(355deg);
+}
+
+.hero-top-text,
+.hero-tagline,
+.hero-event{color:var(--brown);}
+/* .couple-name,.hero-date{color:var(--gold-dark);} */
+ .couple-name span{color:var(--gold);}
+.hero-divider{background:var(--gold);}
+
+.couple-section,
+.venue-section{
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255,255,255,.96), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(225,199,132,.42), transparent 27%),
+    linear-gradient(180deg, #fffdf7 0%, #f3ead2 50%, #fffdf7 100%);
+}
+
+.invitation-section,
+.countdown-section,
+.thankyou-section{
+  background:linear-gradient(180deg, #fffdf7 0%, #f5ecd5 50%, #fffdf7 100%);
+}
+
+.couple-section::before,
+.couple-section::after,
+.venue-section::before,
+.venue-section::after{border-color:rgba(190,151,74,.28);}
+
+.couple-heading span,
+.person-label,
+.venue-label,
+.event-details span,
+.countdown-title,
+.invitation-small,
+.invitation-date,
+.ornament,
+.closing-line{color:var(--gold-dark);}
+
+.couple-heading h2,
+.person-copy h3,
+.venue-card h2,
+.invitation-title,
+.thankyou-content h2,
+.thankyou-content h3{
+  color:#8c7137;
+  background:linear-gradient(110deg, #80662e 0%, #d2b66f 48%, #8a6d31 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.couple-subtitle,
+.person-copy p,
+.couple-quote,
+.address,
+.welcome-text,
+.invitation-text,
+.thankyou-message{color:var(--brown-soft);}
+
+.glass-card,
+.venue-card,
+.invitation-card{
+  border-color:rgba(213,184,106,.42);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.78), rgba(247,235,202,.48)),
+    linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.16));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.94), 0 24px 70px rgba(83,65,32,.14);
+}
+
+.glass-card::before,
+.venue-card::before{
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.84), transparent 38%),
+    radial-gradient(circle at 50% 0%, rgba(226,199,130,.42), transparent 34%);
+}
+
+.glass-card:hover{border-color:rgba(182,138,50,.5);}
+
+.image-frame{
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255,255,255,.94), rgba(244,231,195,.76) 42%, rgba(190,151,74,.3)),
+    linear-gradient(145deg, #f3ead2, #fffdf5);
+}
+
+.couple-mark span{border-color:var(--gold);box-shadow:14px 0 0 -2px transparent,14px 0 0 0 var(--gold);}
+
+.location-icon::before{border-color:var(--gold);}
+.location-icon::after{background:var(--gold);}
+.divider{background:linear-gradient(90deg, transparent, #d5bd81, transparent);}
+.venue-card h3{color:var(--brown);}
+.venue-card h4{color:var(--gold-dark);}
+.event-details p{color:var(--brown);border-color:rgba(207,181,116,.35);background:rgba(255,253,246,.52);}
+.map-btn{
+  border-color:rgba(181,151,80,.38);
+  background:linear-gradient(135deg, #d8c28a 0%, #b39652 52%, #8f7337 100%);
+  box-shadow:0 16px 34px rgba(116,85,28,.18), inset 0 1px 0 rgba(255,255,255,.38);
+}
+
+.thankyou-section{
+  background:
+    radial-gradient(circle at 50% 16%, rgba(231,211,158,.3), transparent 31%),
+    linear-gradient(180deg, #fffdf8 0%, #f5ecd7 52%, #fffdf8 100%);
+}
+
+.countdown-box{border-color:rgba(190,151,74,.24);}
+.countdown-number{color:var(--brown);}
+.countdown-label{color:var(--gold-dark);}
+
+.music-control{
+  border-color:rgba(190,151,74,.42);
+  color:var(--gold-dark);
+  background:rgba(255,253,245,.92);
+  box-shadow:0 10px 30px rgba(83,65,32,.16);
+}
+
+/* .music-control-icon{fill:var(--gold);stroke:var(--gold);} */
+
+/* Final sections: explicit selectors keep the palette consistent. */
+section.venue-section{
+  background:
+    radial-gradient(circle at 16% 18%, rgba(238,220,174,.48), transparent 29%),
+    radial-gradient(circle at 84% 24%, rgba(218,195,139,.32), transparent 27%),
+    linear-gradient(180deg, #fffdf8 0%, #f4ecd8 52%, #fffdf8 100%);
+}
+
+.venue-section .venue-card{
+  border-color:rgba(196,165,94,.32);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.84), rgba(247,237,210,.5)),
+    linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.18));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 28px 80px rgba(83,65,32,.13);
+}
+
+.venue-section .venue-card::before{
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.8), transparent 35%),
+    radial-gradient(circle at 50% 0%, rgba(229,210,163,.4), transparent 34%);
+}
+
+.venue-section .venue-label,
+.venue-section .event-details span,
+.venue-section .venue-card h4{color:#856d37;}
+
+.venue-section .venue-card h2{
+  color:#80662e;
+  background:linear-gradient(105deg,#765d29,#ceb16b 50%,#80662e);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.venue-section .venue-card h3,
+.venue-section .event-details p{color:#59492f;}
+.venue-section .address,
+.venue-section .welcome-text{color:#76664b;}
+.venue-section .event-details p{border-color:rgba(196,165,94,.28);background:rgba(255,253,247,.58);}
+.venue-section .location-icon{border-color:rgba(190,151,74,.3);}
+.venue-section .location-icon::before{border-color:#b49754;}
+.venue-section .location-icon::after{background:#b49754;}
+.venue-section .divider{background:linear-gradient(90deg,transparent,#d7bf82,transparent);}
+.venue-section .map-btn{
+  border-color:rgba(181,151,80,.38);
+  background:linear-gradient(135deg,#dfcc9c 0%,#b89b58 52%,#8f743b 100%);
+  box-shadow:0 16px 34px rgba(116,85,28,.18),inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+section.thankyou-section{
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 14%, rgba(234,216,169,.36), transparent 32%),
+    radial-gradient(circle at 12% 78%, rgba(224,202,148,.2), transparent 25%),
+    linear-gradient(180deg,#fffdf8 0%,#f4ecd8 52%,#fffdf8 100%);
+}
+
+.thankyou-section .ornament{color:#b49754;}
+.thankyou-section .thankyou-content h2,
+.thankyou-section .thankyou-content h3{
+  color:#80662e;
+  background:linear-gradient(105deg,#765d29,#d2b873 50%,#80662e);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.thankyou-section .thankyou-message{color:#76664b;}
+.thankyou-section .closing-line{color:#856d37;}
+
+/* Light, minimal champagne finish */
+.gate-container,
+.door,
+.couple-section,
+.invitation-section,
+.countdown-section,
+section.venue-section,
+section.thankyou-section{
+  background:
+    radial-gradient(circle at 18% 16%, rgba(231,218,185,.2), transparent 28%),
+    radial-gradient(circle at 82% 22%, rgba(224,210,178,.14), transparent 26%),
+    linear-gradient(180deg,#fffefa 0%,#f8f4ea 52%,#fffefa 100%);
+}
+
+.glass-card,
+.invitation-card,
+.venue-section .venue-card{
+  border-color:rgba(197,173,119,.25);
+  background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(250,246,236,.56));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.96),0 22px 64px rgba(85,77,60,.08);
+}
+
+.glass-card::before,
+.venue-section .venue-card::before{
+  background:
+    linear-gradient(120deg,rgba(255,255,255,.82),transparent 38%),
+    radial-gradient(circle at 50% 0%,rgba(231,220,193,.22),transparent 34%);
+}
+
+.couple-heading h2,
+.person-copy h3,
+.venue-section .venue-card h2,
+.thankyou-section .thankyou-content h2,
+.thankyou-section .thankyou-content h3{
+  color:#887650;
+  background:linear-gradient(105deg,#746b59,#c3aa73 50%,#827451);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.venue-section .map-btn{
+  border-color:rgba(177,153,99,.26);
+  background:linear-gradient(135deg,#e5d8ba,#bea874 55%,#9b875b);
+  box-shadow:0 12px 28px rgba(92,78,48,.14),inset 0 1px 0 rgba(255,255,255,.48);
+}
+
+.music-control{
+  border-color:rgba(197,173,119,.28);
+  background:rgba(255,254,250,.94);
+  box-shadow:0 8px 24px rgba(85,77,60,.1);
+}
+
+/* Champagne, blush and sage gradient blend */
+.couple-section,
+.countdown-section,
+section.thankyou-section{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(235,207,201,.2),transparent 30%),
+    radial-gradient(circle at 88% 24%,rgba(205,218,196,.2),transparent 28%),
+    radial-gradient(circle at 50% 86%,rgba(231,216,178,.18),transparent 34%),
+    linear-gradient(145deg,#fffefa 0%,#faf4ef 48%,#f5f7ef 100%);
+}
+
+.invitation-section,
+section.venue-section{
+  background:
+    radial-gradient(circle at 84% 16%,rgba(235,207,201,.2),transparent 29%),
+    radial-gradient(circle at 14% 76%,rgba(205,218,196,.18),transparent 27%),
+    linear-gradient(145deg,#f7f8f1 0%,#fffefa 50%,#faf3ed 100%);
+}
+
+.glass-card,
+.invitation-card,
+.venue-section .venue-card{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.9),rgba(250,245,236,.52)),
+    radial-gradient(circle at 100% 0%,rgba(226,211,203,.16),transparent 38%),
+    radial-gradient(circle at 0% 100%,rgba(209,220,202,.14),transparent 36%);
+}

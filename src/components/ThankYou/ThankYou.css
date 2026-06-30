@@ -1,0 +1,102 @@
+.thankyou-section{
+  min-height:80vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:clamp(66px, 9vw, 100px) 20px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #fff9fc 0%,
+    #fbeef3 50%,
+    #fff9fc 100%
+  );
+
+  position:relative;
+}
+
+.thankyou-content{
+  text-align:center;
+  width:min(800px, 100%);
+}
+
+.ornament{
+  font-size:2rem;
+  color:#cc7f98;
+}
+
+.thankyou-content h2{
+  margin-top:20px;
+
+  font-size:clamp(2.5rem, 6vw, 4rem);
+
+  color:#ad5d78;
+
+  font-family:"Cormorant Garamond", serif;
+}
+
+.thankyou-message{
+  margin-top:25px;
+
+  font-size:clamp(1rem, 2.2vw, 1.2rem);
+
+  line-height:2;
+
+  color:#685a61;
+}
+
+.closing-line{
+  margin-top:40px;
+
+  color:#92566b;
+
+  letter-spacing:clamp(2px, .7vw, 4px);
+
+  text-transform:uppercase;
+
+  font-size:0.9rem;
+}
+
+.thankyou-content h3{
+  margin-top:15px;
+
+  font-size:clamp(1.8rem, 4vw, 2.5rem);
+
+  color:#cc7f98;
+
+  font-family:"Cormorant Garamond", serif;
+}
+@media(max-width:768px){
+
+  .thankyou-section{
+    min-height:auto;
+    padding:64px 15px;
+  }
+
+  .thankyou-content h2{
+    font-size:2.5rem;
+  }
+
+  .thankyou-message{
+    font-size:1rem;
+    line-height:1.8;
+  }
+
+  .thankyou-content h3{
+    font-size:1.8rem;
+  }
+}
+
+@media(max-width:480px){
+  .thankyou-section{
+    padding:56px 12px;
+  }
+
+  .closing-line{
+    font-size:.72rem;
+    line-height:1.7;
+  }
+}

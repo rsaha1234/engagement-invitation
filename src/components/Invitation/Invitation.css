@@ -1,0 +1,121 @@
+.invitation-section{
+  padding:44px 20px 80px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+  linear-gradient(
+    180deg,
+    #fff9fc 0%,
+    #fceff4 50%,
+    #fff9fc 100%
+  );
+}
+
+.invitation-card{
+  width:min(850px, 100%);
+  max-width:100%;
+
+  padding:clamp(38px, 6vw, 70px) clamp(22px, 5vw, 60px);
+
+  background:
+  rgba(255,255,255,.85);
+
+  backdrop-filter:blur(20px);
+
+  border-radius:clamp(20px, 4vw, 30px);
+
+  text-align:center;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.08);
+
+  border:1px solid rgba(205,126,151,.2);
+}
+
+.ornament{
+  font-size:2rem;
+  color:#cc7f98;
+
+  margin:10px 0 25px;
+}
+
+.invite-heading{
+  font-size:clamp(1.75rem, 4vw, 2.2rem);
+
+  color:#ad5d78;
+
+  font-family:"Cormorant Garamond", serif;
+
+  margin-bottom:30px;
+}
+
+.invite-text{
+  font-size:clamp(.98rem, 2.2vw, 1.15rem);
+
+  line-height:2.1;
+
+  color:#685a61;
+
+  max-width:700px;
+
+  margin:auto;
+}
+
+.date-box{
+  margin-top:45px;
+}
+
+.date-box h3{
+  font-size:2.3rem;
+
+  color:#cc7f98;
+
+  font-family:"Cormorant Garamond", serif;
+
+  letter-spacing:2px;
+}
+
+@media(max-width:768px){
+
+  .invitation-section{
+    padding:34px 15px 62px;
+  }
+
+  .invitation-card{
+    padding:40px 24px;
+  }
+
+  .invite-heading{
+    font-size:1.8rem;
+  }
+
+  .invite-text{
+    font-size:1rem;
+    line-height:1.9;
+  }
+
+  .date-box h3{
+    font-size:1.8rem;
+  }
+}
+
+@media(max-width:480px){
+  .invitation-section{
+    padding:28px 12px 54px;
+  }
+
+  .invitation-card{
+    padding:32px 18px;
+  }
+
+  .invite-text{
+    line-height:1.75;
+  }
+
+  .date-box{
+    margin-top:32px;
+  }
+}

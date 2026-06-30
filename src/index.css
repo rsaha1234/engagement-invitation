@@ -1,0 +1,34 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body,#root{
+  width:100%;
+  min-height:100%;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  overflow-x:hidden;
+  background:#fff8fb;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+section{
+  width:100%;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
